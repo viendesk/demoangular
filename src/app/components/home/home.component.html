@@ -1,0 +1,25 @@
+<div class="mt-5" >
+    <h2>Top cheapest courses</h2>
+    <table class="table mt-1 table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Fee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of top3courses; let i = index" >
+                <td >{{i}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.description}}</td>
+                <td>
+                    {{ item.fee > 0 ? (item.fee | currency:'$') : 'Free' }}
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>
